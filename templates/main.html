@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Main V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}">
+<!--===============================================================================================-->
+	<link rel="icon" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="icon" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+
+<!--===============================================================================================-->
+
+	<link rel="icon" type="text/css" href="{{url_for('static', filename='css/animate.css')}}">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="text/css" href="{{url_for('static', filename='css/hamburgers.min.css')}}">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="text/css" href="{{url_for('static', filename='css/select2.min.css')}}">
+
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class=" js-tilt" data-tilt>
+					<img src="{{url_for('static', filename='images/img-01.png')}}" alt="IMG" >
+				</div>
+				<form method="POST">
+				<input class="input100" type="text" name="path" placeholder="Paste the complete file path">
+				<div class="container-login100-form-btn button">
+					<button class="login100-form-btn" id="fakebtn" formaction="/Upload">
+						Upload
+					</button>
+				</div>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" id="fakebtn" formaction="/pro">
+						Download
+					</button>
+				</div>
+
+			</form>
+
+			</div>
+
+		</div>
+		<h3>The File is Seeding</h3>
+
+    	<h3>The Magnet URI: {{ value }}<h3>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+
+		<script  type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+
+	<script  type="text/javascript" src="{{url_for('static',filename='js/popper.js')}}"></script>
+	<script  type="text/javascript" src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+
+	<script  type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+<!--===============================================================================================-->
+
+	<script  type="text/javascript" src="{{url_for('static',filename='js/select2.min.js')}}"></script>
+	<script  type="text/javascript" src="{{url_for('static',filename='js/main.js')}}"></script>
+
+
+<!--===============================================================================================-->
+
+	<script  type="text/javascript" src="{{url_for('static',filename='js/tilt.jquery.min.js')}}"></script>
+
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================
+<script>
+const realFileBtn = document.getElementById("realbtn");
+const customBtn = document.getElementById("fakebtn");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value;
+
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+
+</script>-->
+</body>
+</html>
